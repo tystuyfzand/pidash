@@ -1,0 +1,1 @@
+[{"module":"clock","settings":"{\"timezone\":\"America/Detroit\"}","x":9,"y":0,"width":3,"height":2},{"module":"weather","settings":"{\"location\":\"Grand Rapids, MI, USA\",\"latitude\":42.9633599,\"longitude\":-85.6680863,\"refresh\":\"300\"}","x":10,"y":2,"width":2,"height":2}]

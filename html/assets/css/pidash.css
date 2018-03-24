@@ -1,0 +1,22 @@
+body {
+    background-image: url('/assets/image/background.jpg');
+    background-size: cover;
+}
+
+.grid-stack {
+    height: 100%;
+}
+
+.ui-resizable-autohide .grid-module-edit {
+    display: none;
+}
+
+.grid-module-edit {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.grid-module-edit a {
+    color: #fff;
+}

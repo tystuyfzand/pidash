@@ -1,0 +1,37 @@
+#! /bin/sh
+# preinst script for pidash
+set -e
+addpidashuser() {
+    if ! getent passwd pidash > /dev/null; then
+       adduser --quiet --system --group \
+        --disabled-login \
+    	--home /var/lib/pidash \
+    	--no-create-home \
+    	--shell /bin/false \
+    	pidash
+    fi
+}
+
+createdirectories() {
+	mkdir -p /var/lib/pidash || true
+	chown -R pidash:pidash /var/lib/pidash
+}
+
+case "$1" in
+    install)
+        addpidashuser
+        createdirectories
+        ;;
+    upgrade)
+        addpidashuser
+        createdirectories
+        ;;
+    abort-upgrade)
+        ;;
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 0
+        ;;
+esac
+
+exit 0

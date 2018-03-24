@@ -1,0 +1,11 @@
+[Unit]
+Description=PiDash
+
+[Service]
+User=pidash
+Group=pidash
+Restart=on-failure
+ExecStart=/usr/bin/pidash -config /etc/pidash/dashboard.conf -data /var/lib/pidash
+
+[Install]
+WantedBy=multi-user.target

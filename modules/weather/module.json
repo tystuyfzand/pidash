@@ -1,0 +1,15 @@
+{
+  "name": "Weather",
+  "defaultSize": [2, 2],
+  "assets": {
+    "views": [
+      "index.html"
+    ],
+    "styles": [
+      "weather.css"
+    ],
+    "scripts": [
+      "weather.js"
+    ]
+  }
+}

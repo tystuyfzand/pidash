@@ -1,0 +1,17 @@
+{
+  "name": "Clock",
+  "defaultSize": [3, 2],
+  "assets": {
+    "views": [
+      "index.html"
+    ],
+    "styles": [
+      "clock.css"
+    ],
+    "scripts": [
+      "moment.min.js",
+      "moment-timezone.js",
+      "clock.js"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+<div class="location">{{.location}}</div>
+<div class="current">
+	<span class="current-icon">
+		<i class="wi {{ .currently.icon }}"></i>
+	</span>
+    <span class="current-temp">{{.currently.temperature | printf "%.0f"}}°F</span>
+</div>

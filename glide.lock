@@ -1,0 +1,30 @@
+hash: 076d283a040a26a6db088c0b0f4a0669608fe1d80b75e74733d2c91c19881530
+updated: 2018-03-23T20:36:05.575365-04:00
+imports:
+- name: github.com/cjoudrey/gluahttp
+  version: b4bfe0c50fea948dcbf3966e120996d6607bbd89
+- name: github.com/cjoudrey/gluaurl
+  version: 31cbb9bef199454415879f2e6d609d1136d60cad
+- name: github.com/go-ini/ini
+  version: 6333e38ac20b8949a8dd68baa3650f4dee8f39f0
+- name: github.com/layeh/gopher-json
+  version: 1f632b9a4f86b51489c7aa028bc05512f6807785
+- name: github.com/tdewolff/minify
+  version: dfa6461293239be46daa289dd3492e76d9de469a
+  subpackages:
+  - css
+  - js
+- name: github.com/tdewolff/parse
+  version: c7248c06ec341eb47cf9feb37855d3cf64097a9c
+  subpackages:
+  - buffer
+  - css
+  - js
+  - strconv
+- name: github.com/yuin/gopher-lua
+  version: 84ea3a3c79b3c4b3b39606cc96f255cd63635ce0
+  subpackages:
+  - ast
+  - parse
+  - pm
+testImports: []

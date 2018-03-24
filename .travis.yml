@@ -1,0 +1,22 @@
+language: go
+
+go:
+- 1.9.x
+
+sudo: false
+
+script:
+- export VERSION=`grep "const Version" pidash.go | awk '{print $4}' | sed -e 's/^"//' -e 's/"$//' | tr -d '\n'`
+- make test
+- make build-all
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ZjEi02kap7hdYQ6QRsF30P7yNhqWF6C9ldjJ9Z5n3OzwFPZNnKCrK1ocvXM+wfrL0guYxRxm2THdKDCYB68XYM/RGAwnS1sKCpcwPe74oB8LQ6IxaiYEVSMN0OODM5kuME5dsbqRnE8iEeuH4/i0m5itmj9793hj1FW7PCuro/9Kmq000xGxWNlv8T0Y9wpJ81q1lVzuAeUDmGRGwQuwmS/WMk6LqE0lxHCNgoYRblvTjAvpSyyha7Bd8xgBe3ytf5Z3sMnPNayDAoKxPoi7+7UFWnVyCMtWceO6dkQN8AHZEzNAts/DsHjUfS3C38E4NRbSZfvcDtBbyf3M749/RIawo3Ik3oJMg3Ji16mWB362k9yj/zDex9hIGrs53cAhBUMshW9Sx8bP89TiaEHdybGpBF17YXiMa9Ipa6cergYFanMTKfXSSm8ThFd7ToH1UH+yoq9Ddgl+lo7DIKIXcW62+02EeYiFFZ5Y/qek95T8NOCIbo3gPGJK8P6iU4EW3YLRVs+rcACw1PKy8fL3NioCXf0rcJlAKBqV/Cci9qq4uwlM7EJ2K/PsS9TPdyUUD1WDwSQXF5Fwea91KOWtSwEaKYn+U2tohaFMZrwWL7JgvXsfbPC4BvdzLT+nkAGLySZa5nmeopKdQT5YVCwnY9aXtLIRFzlZGhIN7UvlTpI=
+  file_glob: true
+  file: "dist/*.deb"
+  on:
+    repo: tystuyfzand/pidash
+    branch: 'master'
+    tags: true

@@ -1,0 +1,9 @@
+package: github.com/tystuyfzand/pidash
+import:
+- package: github.com/yuin/gopher-lua
+- package: github.com/tdewolff/minify
+- package: github.com/go-ini/ini
+  version: ^1.33.0
+- package: github.com/cjoudrey/gluahttp
+- package: github.com/layeh/gopher-json
+- package: github.com/cjoudrey/gluaurl
