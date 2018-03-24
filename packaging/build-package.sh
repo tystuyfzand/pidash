@@ -1,6 +1,8 @@
 echo "Building package pidash_$VERSION-$ARCH.deb"
 
-fpm -s dir -t deb -p dist/pidash_$VERSION-$ARCH.deb \
+mkdir -p dist/deb || true
+
+fpm -s dir -t deb -p dist/deb/pidash_$VERSION-$ARCH.deb \
         -n pidash -v $VERSION \
         --config-files /etc/pidash/dashboard.conf \
         --deb-priority optional --force \
