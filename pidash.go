@@ -9,7 +9,7 @@ import (
 	"fmt"
 )
 
-const Version = "1.0.0"
+const Version = "1.0.1"
 
 var (
 	flagConfig = flag.String("config", "dashboard.conf", "Config file path")
